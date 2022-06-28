@@ -1,46 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flex Turismos</title>
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
     <header>
-        <h1>FlexTurismos</h1>
-        <ul>
-            <li><a href="#quem-somos">Quem Somos</a></li>
-            <li><a href="#servicos">Serviços</a></li>
-            <li><a href="#planos">Planos</a></li>
-        </ul>
+        <div class="flex-container menu">
+            <div>
+                <h1>FlexTurismos</h1>
+            </div>
+            <ul class="list-items">
+                <li><a href="#quem-somos">Quem Somos</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#planos">Planos</a></li>
+            </ul>
+        </div>
     </header>
 
-    <div>
-        <div>
+    <section class="flex-container apresentacao">
+        <div class="texto-apresentacao">
             <h1>Flex <br>Turismos</h1>
             <p>O melhor serviço para você!</p>
-            <a href="">Saiba Mais!</a>
+            <button type="submit">Saiba Mais</button>
         </div>
 
         <div>
             <div><img src="./images/0-main.png" alt="banner de apresentação"></div>
         </div>
-    </div>
+    </section>
 
-    <div>
+    <section class="flex-container" id="quem-somos">
+        <div>
+            <h2>Quem somos</h2>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when
+                looking at its layout. </p>
+            <p>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed
+                to using 'Content here, content here', making it look like readable English.</p>
+        </div>
+
         <div>
             <img src="./images/1-quem-somos.png" alt="balcão de atendimento">
         </div>
+    </section>
 
-        <div>
-            <h2>Quem somos</h2>
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
-            <p>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-        </div>
-    </div>
-
-    <div>
+    <section class="flex-container">
         <div>
             <h2>Serviços</h2>
         </div>
@@ -53,9 +61,9 @@
             </div>
 
             <div>
-               <div><img src="./images/icon-1.png" alt="pacote de viagens"></div>
-               <p>Pacotes de viagens</p>
-               <a href="#">Comprar Agora</a>
+                <div><img src="./images/icon-1.png" alt="pacote de viagens"></div>
+                <p>Pacotes de viagens</p>
+                <a href="#">Comprar Agora</a>
             </div>
 
             <div>
@@ -65,9 +73,9 @@
             </div>
 
         </div>
-    </div>
+    </section>
 
-    <div>
+    <section class="flex-container">
 
         <div>
             <h3>Plano 2</h3>
@@ -103,11 +111,12 @@
             </ul>
             <a href="#">Saiba Mais!</a>
         </div>
-    </div>
+    </section>
 
-    <footer>
+    <footer class="flex-container">
         <p>&copy; 2021 CSS Flexbox</p>
         <p>Desenvolvido por: Seu nome aqui dev</p>
     </footer>
 </body>
+
 </html>
