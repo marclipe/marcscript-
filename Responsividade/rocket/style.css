@@ -7,12 +7,21 @@
     outline: 0;
 }
 
+html {
+    /*a cada 1rem será considerado 10px*/
+    font-size: 62.5%;
+}
+
 html,
 body {
     height: 100vh;
     font-family: "Source Sans Pro";
     text-rendering: optimizelegibility;
     -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-size: 1.6rem;
 }
 
 header {
@@ -38,17 +47,19 @@ header img {
 
 header nav ul {
     display: flex;
+    font-size: 1.4rem;
 }
 
 header nav ul li {
     list-style: none;
+    font-size: 1.4rem;
 }
 
 header nav ul li a {
     text-decoration: none;
     color: white;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 1.4rem;
     padding: 24px;
     transition: all 250ms linear 0s;
 }
@@ -59,14 +70,14 @@ header nav ul li a:hover {
 
 h2 {
     color: rgb(75, 75, 75);
-    font-size: 36px;
-    line-height: 46px;
+    font-size: 3.6rem;
+    line-height: 4.6rem;
 }
 
 h3 {
     color: rgb(75, 75, 75);
-    font-size: 28px;
-    line-height: 38px;
+    font-size: 2.8rem;
+    line-height: 3.8rem;
 }
 
 .button {
@@ -97,6 +108,7 @@ section.hero {
 section.hero .container {
     width: 90%;
     max-width: 980px;
+    text-align: center;
 
     margin: auto;
 
@@ -105,8 +117,8 @@ section.hero .container {
 
 section.hero p {
     color: rgb(154, 142, 191);
-    font-size: 18px;
-    line-height: 32px;
+    font-size: 1.8rem;
+    line-height: 3.2rem;
     margin: 10px 0px 0px;
 }
 
@@ -128,13 +140,13 @@ CARDS
     margin: auto;
 
     display: grid;
-    grid-template-columns: 310px 310px 310px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 20px;
 }
 
 .text--medium {
     font-size: 16px;
-    line-height: 26px;
+    line-height: 2.6rem;
     font-weight: 400;
     color: #ecf0f1;
 }
@@ -358,4 +370,26 @@ FORM
 
 #form .button {
     margin: 20px 8px 10px;
+}
+
+/*media queries*/
+@media (max-width: 768px) {
+    html {
+        font-size: 50%;
+    }    
+}
+
+@media (max-width: 630px) {
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero .container img{
+        order: -1;
+    }
+
+    .form-group {
+        display: block;
+    }
 }
