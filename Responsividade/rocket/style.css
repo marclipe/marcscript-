@@ -372,24 +372,3 @@ FORM
     margin: 20px 8px 10px;
 }
 
-/*media queries*/
-@media (max-width: 768px) {
-    html {
-        font-size: 50%;
-    }    
-}
-
-@media (max-width: 630px) {
-    .hero .container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero .container img{
-        order: -1;
-    }
-
-    .form-group {
-        display: block;
-    }
-}
