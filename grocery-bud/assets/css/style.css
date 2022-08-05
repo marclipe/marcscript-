@@ -258,7 +258,7 @@ Grocery List
 .grocery-container {
   margin-top: 2rem;
   transition: var(--transition);
-  visibility: hidden;
+  /*visibility: hidden;*/ /*Tirando meu item*/
 }
 .show-container {
   visibility: visible;
