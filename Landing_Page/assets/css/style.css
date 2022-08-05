@@ -72,78 +72,131 @@
 
 }
 
+
 /*-----------------------------------*\
-  #RESET
-\*-----------------------------------*/
+    #RESET
+  \*-----------------------------------*/
 
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-li { list-style: none; }
+li {
+    list-style: none;
+}
 
 a {
-  text-decoration: none;
-  color: inherit;
+    text-decoration: none;
+    color: inherit;
 }
 
 a,
 img,
 span,
 button,
-ion-icon { display: block; }
-
-img { height: auto; }
-
-button {
-  background: none;
-  border: none;
-  font: inherit;
-  cursor: pointer;
+ion-icon {
+    display: block;
 }
 
-ion-icon { pointer-events: none; }
+img {
+    height: auto;
+}
 
-address { font-style: normal; }
+button {
+    background: none;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+}
+
+ion-icon {
+    pointer-events: none;
+}
+
+address {
+    font-style: normal;
+}
 
 html {
-  font-family: var(--ff-poppins);
-  font-size: 10px;
-  scroll-behavior: smooth;
+    font-family: var(--ff-poppins);
+    font-size: 10px;
+    scroll-behavior: smooth;
 }
 
 body {
-  background-color: var(--white);
-  font-size: 1.6rem;
-  color: var(--davys-gray-gray);
+    background-color: var(--white);
+    font-size: 1.6rem;
+    color: var(--davys-gray);
 }
 
-:focus-visible { outline-offset: 4px; }
-
-::-webkit-scrollbar { width: 10px; }
-
-::-webkit-scrollbar-track { background-color: hsl(0, 0%, 98%); }
-
-::-webkit-scrollbar-thumb { background-color: hsl(0, 0%, 80%); }
-
-::-webkit-scrollbar-thumb:hover { background-color: hsl(0, 0%, 70%); }
-
-/*-----------------------------------*\
-  #REUSED STYLE
-\*-----------------------------------*/
-.container {padding-inline: 15px;}
-
-/*-----------------------------------*\
-  #HEADER
-\*-----------------------------------*/
-
-.navbar {
-    display: none;
+:focus-visible {
+    outline-offset: 4px;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: hsl(0, 0%, 98%);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: hsl(0, 0%, 80%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(0, 0%, 70%);
+}
+
+
+
+
+
+/*-----------------------------------*\
+    #REUSED STYLE
+  \*-----------------------------------*/
+
+.container {
+    padding-inline: 15px;
+}
+
+.btn {
+    color: var(--color, var(--white));
+    font-size: var(--fs-4);
+    max-width: var(--width, max-content);
+    padding: 10px 20px;
+    border-radius: var(--radius-10);
+    transition: var(--transition-1);
+}
+
+.btn-primary,
+.btn-secondary:is(:hover, :focus) {
+    background-color: var(--pumpkin);
+}
+
+.btn-primary:is(:hover, :focus),
+.btn-secondary {
+    background-color: var(--russian-violet);
+}
+
+.btn-outline {
+    --color: var(--pumpkin);
+    --width: 100%;
+    text-align: center;
+    font-weight: var(--fw-500);
+    border: 1px solid var(--cultured-3);
+}
+
+
+
+/*-----------------------------------*\
+    #HEADER
+  \*-----------------------------------*/
 
 .header {
     position: absolute;
@@ -155,21 +208,24 @@ body {
     z-index: 4;
 }
 
-header.active {
+.header.active {
     position: fixed;
     transform: translateY(-100%);
     filter: drop-shadow(var(--shadow-1));
-    animation: slideIn 0.5% ease forwards; /*NEW*/
+    animation: slideIn 0.5s ease forwards;
 }
 
 @keyframes slideIn {
     0% {
         transform: translateY(-100%);
     }
-    100% {transform: translateY(0);}
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
-.header > .container {
+.header>.container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -182,9 +238,51 @@ header.active {
     font-weight: var(--fw-900);
 }
 
+
 .nav-toggle-btn {
     background-color: var(--pumpkin);
     color: var(--white);
     font-size: 35px;
     padding: 2px 8px;
+}
+
+.navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    padding-inline: 15px;
+    overflow: hidden;
+    max-height: 0;
+    visibility: hidden;
+    transition: 0.25s var(--cubic-out);
+}
+
+.navbar.active {
+    max-height: 340px;
+    visibility: visible;
+    transition-duration: 0.5s;
+}
+
+.navbar-list {
+    background-color: var(--cultured-1);
+    margin-block-end: 15px;
+    padding: 20px 30px;
+}
+
+.navbar-link {
+    color: var(--eerie-black);
+    font-size: var(--fs-3);
+    font-weight: var(--fw-600);
+    padding-block: 7px;
+    transition: var(--transition-1);
+}
+
+.navbar-link:is(:hover, :focus, .active) {
+    color: var(--pumpkin);
+}
+
+.navbar .btn {
+    margin-block: ;
 }
