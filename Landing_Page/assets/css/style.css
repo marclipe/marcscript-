@@ -192,6 +192,10 @@ body {
     border: 1px solid var(--cultured-3);
 }
 
+.btn-outline:is(:hover, :focus) {
+    background-color: var(--pumpkin);
+    color: var(--white);
+}
 
 
 /*-----------------------------------*\
@@ -265,6 +269,7 @@ body {
     transition-duration: 0.5s;
 }
 
+
 .navbar-list {
     background-color: var(--cultured-1);
     margin-block-end: 15px;
@@ -286,3 +291,8 @@ body {
 .navbar .btn {
     margin-block: 8px;
 }
+
+
+/*-----------------------------------*\
+    #HEADER
+  \*-----------------------------------*/
