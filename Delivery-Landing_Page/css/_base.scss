@@ -1,7 +1,8 @@
-$colors: (blue, red, yellow); 
+p {
+    color: red;
+    cursor: pointer;
 
-@each $color in $colors {
-    .#{$color}-text {
-        color: lighten($color, 10);;
+    &:hover {
+        color: blue;
     }
 }
