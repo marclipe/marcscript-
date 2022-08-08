@@ -1,6 +1,7 @@
-@for $i from 1 through 5 {
-    .text-#{$i} {
-        font-size: 15px * $i;
+$colors: (blue, red, yellow); 
+
+@each $color in $colors {
+    .#{$color}-text {
+        color: lighten($color, 10);;
     }
 }
-

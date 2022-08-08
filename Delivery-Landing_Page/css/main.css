@@ -1,19 +1,11 @@
-.text-1 {
-  font-size: 15px;
+.blue-text {
+  color: #3333ff;
 }
 
-.text-2 {
-  font-size: 30px;
+.red-text {
+  color: #ff3333;
 }
 
-.text-3 {
-  font-size: 45px;
-}
-
-.text-4 {
-  font-size: 60px;
-}
-
-.text-5 {
-  font-size: 75px;
+.yellow-text {
+  color: #ffff33;
 }/*# sourceMappingURL=main.css.map */
