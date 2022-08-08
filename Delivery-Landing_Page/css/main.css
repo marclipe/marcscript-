@@ -1,18 +1,19 @@
-body {
-  background-color: #7159c1;
-  color: orange;
+.text-1 {
+  font-size: 15px;
 }
 
-.container {
-  box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.6);
-  width: 200px;
-  height: 200px;
-  background-color: white;
+.text-2 {
+  font-size: 30px;
 }
-.container p {
-  box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.6);
-  background-color: red;
-  height: 100px;
-  width: 100px;
-  color: blue;
+
+.text-3 {
+  font-size: 45px;
+}
+
+.text-4 {
+  font-size: 60px;
+}
+
+.text-5 {
+  font-size: 75px;
 }/*# sourceMappingURL=main.css.map */
