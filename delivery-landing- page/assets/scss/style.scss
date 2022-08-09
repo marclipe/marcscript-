@@ -1,15 +1,16 @@
-@import 'config/variables'; 
-@import 'base/base'; 
-@import 'theme/theme'; 
+// Import of partial files
+@import 'config/variables';
+@import 'base/base';
+@import 'theme/theme';
 @import 'layout/layout';
-@import 'components/header'; 
-@import 'components/buttons.scss'; 
-@import 'components/about'; 
-@import 'components/security';  
-@import 'components/services'; 
+@import 'components/header';
+@import 'components/home';
+@import 'components/buttons';
+@import 'components/about';
+@import 'components/security';
+@import 'components/services';
 @import 'components/app';
 @import 'components/contact';
-@import 'components/footer'; 
+@import 'components/footer';
 @import 'components/scroll';
-@import 'components/mediaqueries';       
-   
+@import 'components/mediaqueries';
