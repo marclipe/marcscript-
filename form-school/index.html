@@ -7,27 +7,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/8c2c752eac.js" crossorigin="anonymous"></script>
     <title>Form Soccer</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container">
         <div class="forms-container">
-            <div class="cadastro">
-                <form action="" method="post" autocomplete="on" class="cadastro-form">
-                    <h2 class="titulo">Faça login</h2>
-                    <div class="input-campo">
-                        <i class="fa-solid fa-user"></i>
-                        
+            <div class="signin-signup">
+                <form action="" method="post" autocomplete="on" class="sign-in-form">
+                    <h2 class="title">Faça Login</h2>
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Usuário" />
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Password" />
+                    </div>
+
+                    <!--Botões-->
+                    <input type="submit" value="Entrar" class="btn solid">
+                    <input type="reset" value="Limpar" class="btn solid">
+
+                    <p class="social-text">Ou entrar com plataformas sociais</p>
+                    <div class="social-media">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </form>
+
+                <form action="" method="post" autocomplete="on" class="sign-in-form">
+                    <h2 class="title">Cadastre-se</h2>
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Usuário" />
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" placeholder="Email" />
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Password" />
+                    </div>
+
+                    <!--Botões-->
+                    <input type="submit" value="Cadastrar" class="btn solid">
+                    <input type="reset" value="Limpar" class="btn solid">
+
+                    <p class="social-text">Ou cadastre-se com plataformas sociais</p>
+                    <div class="social-media">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
                     </div>
                 </form>
             </div>
+
         </div>
+        <div class="panels-container"></div>
     </div>
-
-    <div class="panels-container">
-
-    </div>
-
     <script src="app.js"></script>
 </body>
 
